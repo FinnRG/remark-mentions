@@ -1,6 +1,6 @@
 {
   "name": "remark-mentions",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "remark plugin to replace @ mentions with links",
   "main": "index.js",
   "sideEffects": false,
