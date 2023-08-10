@@ -17,6 +17,8 @@ test("remark-mentions", (t) => {
   t.equal(process("@test"), "[**@test**](/test)\n");
 
   t.equal(process("This is @test"), "This is [**@test**](/test)\n");
+  
+  t.equal(process("https://example.com/@test"), "https://example.com/@test\n");
 
   t.equal(
     process("@test", { usernameLink: (username) => `/Profile/${username}` }),
