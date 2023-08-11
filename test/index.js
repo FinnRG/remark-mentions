@@ -8,6 +8,7 @@ import { remark } from "remark";
 import { VFile } from "vfile";
 
 test("remark-mentions", (t) => {
+
   t.equal(typeof remarkMentions, "function", "should be a function");
 
   t.doesNotThrow(() => {
@@ -17,6 +18,8 @@ test("remark-mentions", (t) => {
   t.equal(process("@test"), "[**@test**](/test)\n");
 
   t.equal(process("This is @test"), "This is [**@test**](/test)\n");
+  
+  t.equal(process("https://example.com/@test"), "https://example.com/@test\n");
 
   t.equal(
     process("@test", { usernameLink: (username) => `/Profile/${username}` }),
