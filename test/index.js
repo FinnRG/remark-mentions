@@ -8,6 +8,7 @@ import { remark } from "remark";
 import { VFile } from "vfile";
 
 test("remark-mentions", (t) => {
+
   t.equal(typeof remarkMentions, "function", "should be a function");
 
   t.doesNotThrow(() => {
